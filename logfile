@@ -1,0 +1,52 @@
+2024-12-13 17:25:37.630 IST [12041] LOG:  starting PostgreSQL 14.15 (Homebrew) on aarch64-apple-darwin24.1.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.4), 64-bit
+2024-12-13 17:25:37.631 IST [12041] LOG:  listening on IPv6 address "::1", port 5432
+2024-12-13 17:25:37.631 IST [12041] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-12-13 17:25:37.631 IST [12041] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-12-13 17:25:37.632 IST [12042] LOG:  database system was shut down at 2024-12-13 17:24:49 IST
+2024-12-13 17:25:37.634 IST [12041] LOG:  database system is ready to accept connections
+2024-12-13 17:26:53.393 IST [12082] FATAL:  role "postgres" does not exist
+2024-12-13 17:27:00.873 IST [12099] FATAL:  role "postgres@14" does not exist
+2024-12-13 17:27:48.524 IST [12125] FATAL:  database "chandanjv" does not exist
+2024-12-13 17:28:45.566 IST [12170] FATAL:  database "chandanjv" does not exist
+2024-12-13 17:29:33.010 IST [12208] FATAL:  database "stock_user" does not exist
+2024-12-13 17:30:38.662 IST [12236] FATAL:  role "postgres" does not exist
+2024-12-13 17:30:45.015 IST [12250] FATAL:  role "postgresql@14" does not exist
+2024-12-13 17:32:49.097 IST [12539] FATAL:  database "chandanjv" does not exist
+2024-12-13 17:34:14.695 IST [13092] FATAL:  database "chandanjv" does not exist
+2024-12-13 17:37:32.285 IST [13954] FATAL:  database "chandanjv" does not exist
+2024-12-13 17:38:37.901 IST [12047] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-12-13 17:38:37.931 IST [12041] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-12-13 17:38:37.931 IST [12041] LOG:  performing immediate shutdown because data directory lock file is invalid
+2024-12-13 17:38:37.931 IST [12041] LOG:  received immediate shutdown request
+2024-12-13 17:38:37.931 IST [12041] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-12-13 17:38:37.931 IST [12047] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-12-13 17:38:37.932 IST [12041] LOG:  database system is shut down
+2024-12-13 17:52:33.704 IST [15402] LOG:  starting PostgreSQL 14.15 (Homebrew) on aarch64-apple-darwin24.1.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.4), 64-bit
+2024-12-13 17:52:33.706 IST [15402] LOG:  listening on IPv6 address "::1", port 5432
+2024-12-13 17:52:33.706 IST [15402] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-12-13 17:52:33.706 IST [15402] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-12-13 17:52:33.708 IST [15403] LOG:  database system was shut down at 2024-12-13 17:51:35 IST
+2024-12-13 17:52:33.709 IST [15402] LOG:  database system is ready to accept connections
+2024-12-13 17:56:04.372 IST [15469] FATAL:  database "chandanjv" does not exist
+2024-12-13 17:56:24.953 IST [15485] FATAL:  database "template0" is not currently accepting connections
+2024-12-13 22:37:12.392 IST [16696] FATAL:  role "stock_user" does not exist
+2024-12-13 22:38:03.688 IST [16745] FATAL:  role "stock_user" does not exist
+2024-12-13 22:42:14.767 IST [16834] FATAL:  role "postgres" does not exist
+2024-12-13 23:23:18.996 IST [17768] ERROR:  schema "np" does not exist at character 22
+2024-12-13 23:23:18.996 IST [17768] STATEMENT:  UPDATE stock SET ltp=np.float64(2789.39990234375) WHERE stock.id = 1
+2024-12-13 23:24:07.818 IST [17768] ERROR:  schema "np" does not exist at character 22
+2024-12-13 23:24:07.818 IST [17768] STATEMENT:  UPDATE stock SET ltp=np.float64(2789.39990234375) WHERE stock.id = 1
+2024-12-13 23:24:14.527 IST [17768] ERROR:  schema "np" does not exist at character 22
+2024-12-13 23:24:14.527 IST [17768] STATEMENT:  UPDATE stock SET ltp=np.float64(2789.39990234375) WHERE stock.id = 1
+2024-12-13 23:35:26.771 IST [18038] ERROR:  column stock.ath does not exist at character 122
+2024-12-13 23:35:26.771 IST [18038] STATEMENT:  SELECT stock.id AS stock_id, stock.stock_name AS stock_stock_name, stock.ticker AS stock_ticker, stock.ltp AS stock_ltp, stock.ath AS stock_ath 
+	FROM stock
+2024-12-13 23:43:09.711 IST [18225] ERROR:  value too long for type character varying(10)
+2024-12-13 23:43:09.711 IST [18225] STATEMENT:  INSERT INTO stock (stock_name, ticker, ltp, ath) VALUES ('Bajaj Finance', 'BAJFINANCE.NS', NULL, NULL) RETURNING stock.id
+2024-12-14 00:08:47.889 IST [18809] ERROR:  column stock.notes does not exist at character 180
+2024-12-14 00:08:47.889 IST [18809] STATEMENT:  SELECT stock.id AS stock_id, stock.stock_name AS stock_stock_name, stock.ticker AS stock_ticker, stock.ltp AS stock_ltp, stock.ath AS stock_ath, stock.from_alh AS stock_from_alh, stock.notes AS stock_notes 
+	FROM stock
+2024-12-14 00:14:32.185 IST [15402] LOG:  received smart shutdown request
+2024-12-14 00:14:32.188 IST [15402] LOG:  background worker "logical replication launcher" (PID 15409) exited with exit code 1
+2024-12-14 00:14:32.189 IST [15404] LOG:  shutting down
+2024-12-14 00:14:32.207 IST [15402] LOG:  database system is shut down

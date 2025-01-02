@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1>Portfolio</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Stock Name</th>
+                <th>Ticker</th>
+                <th>LTP</th>
+                <th>ATH</th>
+                <th>From ATH (%)</th>
+                <th>Notes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+            <tr>
+                <td>{{ stock.id }}</td>
+                <td>{{ stock.stock_name }}</td>
+                <td>{{ stock.ticker }}</td>
+                <td>{{ stock.ltp }}</td>
+                <td>{{ stock.ath }}</td>
+                <td>{{ stock.from_alh }}</td>
+                <td>
+                    <form action="{{ url_for('update_notes', stock_id=stock.id) }}" method="POST">
+                        <input type="text" name="notes" value="{{ stock.notes }}">
+                        <button type="submit">Update Notes</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('add') }}">Add New Stock</a>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1>Stock Portfolio</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Stock Name</th>
+                <th>Ticker</th>
+                <th>LTP</th>
+                <th>ATH</th>
+                <th>From ATH</th>
+                <th>Breakout/Breakdown</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+            <tr style="background-color: {% if stock.is_breakout_breakdown %}yellow{% else %}white{% endif %};">
+                <td>{{ stock.stock_name }}</td>
+                <td>{{ stock.ticker }}</td>
+                <td>{{ stock.ltp }}</td>
+                <td>{{ stock.ath }}</td>
+                <td>{{ stock.from_alh }}</td>
+                <td>{{ stock.breakout_breakdown }}</td>
+                <td>{{ stock.notes }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

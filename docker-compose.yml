@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "8080:5000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://chandanjv:your_password@db:5432/postgres
+    networks:
+      - stock-network
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: chandanjv
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - stock-network
+
+networks:
+  stock-network:
+
